@@ -8,7 +8,7 @@ import pafy
 
 @click.group(
     cls=HelpColorsGroup, help_headers_color="yellow", help_options_color="cyan")
-@click.version_option('0.1.0')
+@click.version_option('0.1.1')
 def main():
     """Dolus - Change your live video from the terminal"""
 @main.command('cartoonify', help = 'Gives your face a cartoonish effect')
