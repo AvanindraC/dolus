@@ -116,5 +116,29 @@ def negative():
         frame = cv.resize(frame, (640, 480))
         cam.send(frame)
         cam.sleep_until_next_frame()
+@main.command('merge', help = 'Merges your live feed with a youtube video')
+@click.argument('song', nargs = 1)
+def merge(song):
+    with pyvirtualcam.Camera(width=640, height=480, fps=20) as cam:
+        print(f'Using virtual camera: {cam.device}')
+        music_name = song
+        query_string = urllib.parse.urlencode({"search_query": music_name})
+        formatUrl = urllib.request.urlopen("https://www.youtube.com/results?" + query_string)
+        search_results = re.findall(r"watch\?v=(\S{11})", formatUrl.read().decode())
+        clip = requests.get("https://www.youtube.com/watch?v=" + "{}".format(search_results[0]))
+        clip2 = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
+        video = pafy.new(clip2)
+        video = video.getbest(preftype="mp4")
+        video=cv.VideoCapture(video.url)
+        c = cv.VideoCapture(0)
+        while c.isOpened():
+            ret, frame1 = c.read()
+            ret, frame=video.read()
+            frame=cv.resize(frame, (640, 480))
+            frame1=cv.resize(frame1, (640,480))
+            masked = cv.add(frame,frame1)
+            masked = cv.cvtColor(masked, cv.COLOR_BGR2RGB)
+            cam.send(masked)
+            cam.sleep_until_next_frame()
 if __name__ == '__main__':
     main()
