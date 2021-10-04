@@ -51,7 +51,7 @@ the live feed with the youtube video
 
 ![image](https://user-images.githubusercontent.com/77975448/135784123-0067b6c5-479b-456f-ac1c-e097cef6811e.png)
 
-To use it in video calling platforms, change your camera to the virual camera, which is OBS Virtual camera in my case
+To use it in video calling platforms, change your camera to the virtual camera, which is OBS Virtual camera in my case
 
 ![image](https://user-images.githubusercontent.com/77975448/134616113-29d7197c-73d4-401d-a35d-d6a2c6cd81dd.png)
 
