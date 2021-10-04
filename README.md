@@ -34,7 +34,8 @@ Type dolus in the terminal/powershell
 
 It should look like this:-
 
-![image](https://user-images.githubusercontent.com/77975448/134615846-797d222f-7c60-4c33-bacc-1b65d7f35f6d.png)
+![image](https://user-images.githubusercontent.com/77975448/135784172-65aebb8e-698a-4baa-b043-64bd8dadf3c6.png)
+
 
 Then type dolus effectname
 
