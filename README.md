@@ -44,6 +44,12 @@ The ytvid function takes an argument for youtube video in a string
 
 ![image](https://user-images.githubusercontent.com/77975448/134616051-01e0a458-d9b2-43a6-9cd0-60388e5a1c7f.png)
 
+The merge function is pretty similar to the ytvid function,
+but instead of replacing the live feed with a youtube video, it merges
+the live feed with the youtube video
+
+![image](https://user-images.githubusercontent.com/77975448/135784123-0067b6c5-479b-456f-ac1c-e097cef6811e.png)
+
 To use it in video calling platforms, change your camera to the virual camera, which is OBS Virtual camera in my case
 
 ![image](https://user-images.githubusercontent.com/77975448/134616113-29d7197c-73d4-401d-a35d-d6a2c6cd81dd.png)
